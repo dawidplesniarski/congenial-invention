@@ -8,6 +8,7 @@ import {MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateMo
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
+import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import {RegisterComponent} from './register/register.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FormsModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

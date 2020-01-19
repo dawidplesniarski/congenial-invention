@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -9,10 +10,16 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 export class FormComponent implements OnInit {
 
   private form: FormGroup;
+  id:string
 
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      id: new FormControl(''),
+
+  constructor(private fb: FormBuilder, private route: ActivatedRoute) {
+
+    this.route.queryParams.subscribe(params => {
+      this.id = params['id'];
+    });
+      this.form = this.fb.group({
+      id: new FormControl(this.id),
       firstName: new FormControl('', Validators.maxLength(255)),
       lastName: new FormControl('', Validators.maxLength(255)),
       birthDate: new FormControl('', Validators.required),
@@ -20,7 +27,10 @@ export class FormComponent implements OnInit {
     });
   }
 
+
+
   ngOnInit() {
+    //this.id = this.route.snapshot.paramMap.get('id');
   }
 
   toConsole() {
