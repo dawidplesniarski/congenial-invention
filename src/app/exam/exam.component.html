@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+  <div>
+    <label>ID:</label>
+    <input type="text" formControlName="id" readonly/><br>
+    <label>First name:</label>
+    <input type="text" formControlName="name"><br>
+    <label>Last name:</label>
+    <input type="text" formControlName="lastName"><br>
+    <mat-form-field>
+      <input matInput [matDatepicker]="myDatepicker" placeHolder="wybierz datę" formControlName="birthdayDate" >
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field><br>
+    <mat-slider min="100" max="250" step="0.5" value="100" formControlName="wzrost"></mat-slider><br>
+    <button (click)="writeToConsole()">Submit</button>
+  </div>
+</form>
+
+
+

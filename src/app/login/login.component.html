@@ -1,14 +1,17 @@
-<div>
+<form [formGroup]="form">
   <div>
-    <b><p>Podaj nazwę użytkownika:</p></b>
-    <input id='login-input' placeholder="Nazwa użytkownika" [(ngModel)]="myLogin"><br>
+    <div>
+      <b><p>Podaj nazwę użytkownika:</p></b>
+      <input type="text" formControlName="login"><br>
+    </div>
+    <div>
+      <b><p>Podaj hasło:</p></b>
+      <input type="password" formControlName="password"><br>
+    </div>
+    <div>
+      <br><br><button (click) = "onClickLogin()"><b>Zaloguj</b></button>
+    </div>
   </div>
-  <div>
-    <b><p>Podaj hasło:</p></b>
-    <input id='pass-input' placeholder="Hasło" type="password" [(ngModel)]="myPassword">
-  </div>
-  <div>
-    <br><br><button (click) = "onClick()"><b>Zaloguj</b></button>
-  </div>
-</div>
+</form>
+
 

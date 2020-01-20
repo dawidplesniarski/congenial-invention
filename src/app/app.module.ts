@@ -8,14 +8,15 @@ import {MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateMo
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
-import { Router } from '@angular/router';
+import { ExamComponent } from './exam/exam.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ExamComponent
   ],
   imports: [
     AppRoutingModule,

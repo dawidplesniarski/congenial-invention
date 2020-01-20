@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {ActivatedRoute, Router} from '@angular/router';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -30,7 +30,6 @@ export class FormComponent implements OnInit {
 
 
   ngOnInit() {
-    //this.id = this.route.snapshot.paramMap.get('id');
   }
 
   toConsole() {
