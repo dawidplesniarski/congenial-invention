@@ -22,7 +22,8 @@ export class ExamComponent implements OnInit {
       name: new FormControl('', Validators.maxLength(255)),
       lastName: new FormControl('',Validators.maxLength(255)),
       birthdayDate: new FormControl('', Validators.required),
-      wzrost: new FormControl('')
+      wzrost: new FormControl(''),
+      waga: new FormControl('')
     });
   }
 

@@ -11,7 +11,8 @@
       <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
       <mat-datepicker #myDatepicker></mat-datepicker>
     </mat-form-field><br>
-    <mat-slider min="100" max="250" step="0.5" value="100" formControlName="wzrost"></mat-slider><br>
+    <mat-slider min="0" max="300" formControlName="wzrost"></mat-slider><br>
+    <mat-slider min="0" max="500" step="0.25" value="0" formControlName="waga"></mat-slider><br>
     <button (click)="writeToConsole()">Submit</button>
   </div>
 </form>
