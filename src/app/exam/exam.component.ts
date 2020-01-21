@@ -19,8 +19,8 @@ export class ExamComponent implements OnInit {
     });
     this.form = this.fb.group({
       id: new FormControl(this.id),
-      name: new FormControl('', Validators.maxLength(255)),
-      lastName: new FormControl('',Validators.maxLength(255)),
+      name: new FormControl('',[Validators.maxLength(512), Validators.required] ),
+      lastName: new FormControl('',[Validators.maxLength(512), Validators.required]),
       birthdayDate: new FormControl('', Validators.required),
       wzrost: new FormControl(''),
       waga: new FormControl('')

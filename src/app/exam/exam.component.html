@@ -1,19 +1,22 @@
 <form [formGroup]="form">
   <div>
     <label>ID:</label>
-    <input type="text" formControlName="id" readonly/><br>
+    <input type="number" formControlName="id" readonly/><br>
     <label>First name:</label>
-    <input type="text" formControlName="name"><br>
+    <input type="string" formControlName="name"><br>
     <label>Last name:</label>
-    <input type="text" formControlName="lastName"><br>
+    <input type="string" formControlName="lastName"><br><br>
+    <label>Wybierz datę: </label><br>
     <mat-form-field>
       <input matInput [matDatepicker]="myDatepicker" placeHolder="wybierz datę" formControlName="birthdayDate" >
       <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
       <mat-datepicker #myDatepicker></mat-datepicker>
     </mat-form-field><br>
-    <mat-slider min="0" max="300" formControlName="wzrost"></mat-slider><br>
-    <mat-slider min="0" max="500" step="0.25" value="0" formControlName="waga"></mat-slider><br>
-    <button (click)="writeToConsole()">Submit</button>
+    <label>Wzrost: </label><br>
+    <mat-slider min="0" max="250" formControlName="wzrost"></mat-slider><br>
+    <label>Waga: </label><br>
+    <mat-slider min="0" max="500" step="0.2" formControlName="waga"></mat-slider><br>
+    <button (click)="writeToConsole()" [disabled]="!form.valid">Submit</button>
   </div>
 </form>
 
